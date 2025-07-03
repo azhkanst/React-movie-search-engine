@@ -1,35 +1,23 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import './App.css';
+import MovieCard from "./components/MovieCard";
 
 function App() {
-  const [count, setCount] = useState(0)
+
+  const movieNumer = 2;
+
+  const movie_1 = {title: "Movie Epic", release_date: "20 June 1923"};
+  const movie_2 = {title: "DEAD SOULS", release_date: "1 January 2004"};
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      {movieNumer === 1 && <MovieCard movie={movie_1}/> };
+      {movieNumer === 1 ? (<MovieCard movie={movie_1}/>) : (<MovieCard movie={movie_2}/>)}
+
+
+      
     </>
-  )
+  );
 }
 
-export default App
+
+export default App;
