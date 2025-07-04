@@ -13,7 +13,12 @@ function Home() {
 
     return <div className="home">
         <form onSubmit={onSubmit} className="search-form">
-            <input type="text" placeholder="search for movies.." className="search-input"/>
+            <input 
+                type="text" 
+                placeholder="search for movies.." 
+                className="search-input"
+            />
+            <button type="submit" className="search-button">Search</button>
         </form>
 
         <div className="movie-grid">
