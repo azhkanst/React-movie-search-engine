@@ -7,13 +7,14 @@ function Home() {
 
     const movies = [
         {id: 1, title: "Atonement", release_date: "2007"},
-        {id: 2, title: "Movie2", release_date: "2024"},
-        {id: 3, title: "Movie3", release_date: "2004"},
+        {id: 2, title: "Geisha", release_date: "2005"},
+        {id: 3, title: "Openheimer", release_date: "2023"},
     ];
 
     function handleSearch() {
-        e.preventDefault()
+        e.preventDefault();
         alert(searchQuery);
+        setSearchQuery("");
     }
 
     return <div className="home">
@@ -29,9 +30,7 @@ function Home() {
         </form>
 
         <div className="movie-grid">
-            {movies.map((movie) => (
-                <MovieCard movie={movie} key={movie.id}/>
-            ))}
+            {movies.map(movie => ( <MovieCard movie={movie} key={movie.id}/> ))}
         </div>
     </div>
 }
